@@ -3,6 +3,10 @@ import pickle
 import re
 import nltk
 
+from sklearn.feature_extraction.text import TfidfVectorizer
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
 nltk.download('punkt')
 nltk.download('stopwords')
 
@@ -19,6 +23,7 @@ def clean_resume(resume_text):
     clean_text = re.sub(r'[^\x00-\x7f]', r' ', clean_text)
     clean_text = re.sub('\s+', ' ', clean_text)
     return clean_text
+
 # web app
 def main():
     st.title("Resume Screening App")
