@@ -10,7 +10,7 @@ from nltk.tokenize import word_tokenize
 nltk.download('punkt')
 nltk.download('stopwords')
 
-#loading models
+
 clf = pickle.load(open('clf.pkl','rb'))
 tfidfd = pickle.load(open('tfidf.pkl','rb'))
 
@@ -42,7 +42,7 @@ def main():
         prediction_id = clf.predict(input_features)[0]
         st.write(prediction_id)
 
-        # Map category ID to category name
+ 
         category_mapping = {
             15: "Java Developer",
             23: "Testing",
@@ -77,6 +77,5 @@ def main():
 
 
 
-# python main
 if __name__ == "__main__":
     main()
