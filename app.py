@@ -24,6 +24,16 @@ def clean_resume(resume_text):
     clean_text = re.sub('\s+', ' ', clean_text)
     return clean_text
 
+
+# def clean_resume(resume_text):
+#     clean_text = re.sub('http\S+\s*', ' ', resume_text)
+#     clean_text = re.sub('RT|cc', ' ', clean_text)
+#     clean_text = re.sub('#\S+', '', clean_text)
+#     clean_text = re.sub('@\S+', '  ', clean_text)
+#     clean_text = re.sub('[%s]' % re.escape("""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""), ' ', clean_text)
+#     clean_text = re.sub(r'[^\x00-\x7f]', r' ', clean_text)
+#     clean_text = re.sub('\s+', ' ', clean_text)
+#     return clean_text
 # web app
 def main():
     st.title("Resume Screening App")
